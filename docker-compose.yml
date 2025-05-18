@@ -9,7 +9,7 @@ services:
     environment:
       APP_URL: 'http://localhost:3000'
       APP_SECRET: 'a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0'
-      DATABASE_URL: 'postgresql://docmost:zhoule123*@db:5432/docmost?schema=public'
+      DATABASE_URL: 'postgresql://docmost:zhoule123@db:5432/docmost?schema=public'
       REDIS_URL: 'redis://redis:6379'
     ports:
       - "12200:3000"
@@ -22,7 +22,7 @@ services:
     environment:
       POSTGRES_DB: docmost
       POSTGRES_USER: docmost
-      POSTGRES_PASSWORD: zhoule123*
+      POSTGRES_PASSWORD: zhoule123
     restart: unless-stopped
     volumes:
       - db_data:/var/lib/postgresql/data
